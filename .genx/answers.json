@@ -1,0 +1,103 @@
+{
+  "setApiHost": true,
+  "apiHost": "wss://public-foundation.genesislab.global/gwf/",
+  "enableSSO": false,
+  "description": "\n",
+  "groupId": "global.genesis",
+  "applicationVersion": "1.0.0-SNAPSHOT",
+  "enableDeployPlugin": false,
+  "csv": [
+    {
+      "name": "trade",
+      "fields": [
+        "a",
+        "B"
+      ]
+    },
+    {
+      "name": "position",
+      "fields": [
+        "id",
+        "TYPE"
+      ]
+    }
+  ],
+  "framework": "react",
+  "ui": {
+    "fdc3": {
+      "channels": [
+        {
+          "type": "type1",
+          "name": "name1"
+        }
+      ]
+    }
+  },
+  "routes": [
+    {
+      "name": "Home",
+      "tiles": [
+        {
+          "title": "Entity manager",
+          "type": "entity-manager",
+          "config": {
+            "resourceName": "ALL_POSITIONS",
+            "title": "My Positions",
+            "updateEvent": "EVENT_COUNTERPARTY_MODIFY",
+            "deleteEvent": "EVENT_COUNTERPARTY_DELETE",
+            "createEvent": "EVENT_COUNTERPARTY_INSERT",
+            "gridOptions": "\n  {\n    onRowClicked: sendEventOnChannel(\"channel1\", \"type1\"),\n  }",
+            "index": 0,
+            "useOnlyTemplateCols": false
+          },
+          "componentName": "Home-Entitymanager-manager",
+          "componentType": "manager"
+        },
+        {
+          "title": "Grid",
+          "type": "grid-pro",
+          "config": {
+            "resourceName": "ALL_TRADES",
+            "gridOptions": "\n  {\n    onRowClicked: sendEventOnChannel(\"channel2\", \"type2\"),\n    columnDefs: [\n  {\n    \"field\": \"INSTRUMENT_NAME\",\n    \"headerName\": \"Instrument Name\"\n  },\n  {\n    \"field\": \"VALUE\",\n    \"headerName\": \"Inline coldef - VALUE\"\n  },\n  {\n    \"field\": \"QUANTITY\",\n    \"headerName\": \"Quantity\"\n  },\n  {\n    \"field\": \"PNL\",\n    \"headerName\": \"PNL\"\n  }\n],\n  }",
+            "index": 1,
+            "useOnlyTemplateCols": true
+          },
+          "componentName": "Home-Grid-grid",
+          "componentType": "grid"
+        }
+      ],
+      "layoutType": "horizontal-layout",
+      "layoutKey": "Home_1723798041338",
+      "FDC3EventHandlersEnabled": true
+    }
+  ],
+  "appName": "blankappseedtest",
+  "pkgName": "blankappseedtest",
+  "directory": "blankappseedtest",
+  "appSeed": {
+    "type": "remote",
+    "name": "",
+    "description": "Genesis Blank App Seed Configuration",
+    "version": "3.29.0",
+    "repo": "genesiscommunitysuccess/blank-app-seed",
+    "ref": "ak/FUI-2136",
+    "date": "2024-08-16T08:47:21.327Z"
+  },
+  "rootElement": "blankappseedtest-root",
+  "localGenId": "BLANKAPPSEEDTEST",
+  "applicationVersionWeb": "1.0.0",
+  "versions": {
+    "UI": "14.200.0",
+    "GSF": "8.2.3",
+    "Auth": "8.2.1"
+  },
+  "FDC3": {
+    "includeDependencies": true,
+    "channels": [
+      {
+        "type": "type1",
+        "name": "name1"
+      }
+    ]
+  }
+}

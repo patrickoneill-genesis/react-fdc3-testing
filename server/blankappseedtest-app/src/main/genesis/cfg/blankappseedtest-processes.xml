@@ -1,0 +1,94 @@
+<!--
+!
+!   System              : Genesis Business Library
+!   Sub-System          : multi-pro-code-test Configuration
+!   Version             : 1.0
+!   Copyright           : (c) Genesis
+!   Date                : 2022-03-18
+!   Function : Provide Process Definitions Config for multi-pro-code-test.
+!
+!   Modification History
+!
+-->
+<processes>
+<!--    <process name="BLANKAPPSEEDTEST_DATASERVER">-->
+<!--        <groupId>BLANKAPPSEEDTEST</groupId>-->
+<!--        <start>true</start>-->
+<!--        <options>-Xmx1024m -DXSD_VALIDATE=false</options>-->
+<!--        <module>genesis-pal-dataserver</module>-->
+<!--        <package>global.genesis.dataserver.pal</package>-->
+<!--        <script>blankappseedtest-dataserver.kts</script>-->
+<!--        <description>Displays real-time details</description>-->
+<!--        <language>pal</language>-->
+<!--    </process>-->
+<!--    <process name="BLANKAPPSEEDTEST_REQUEST_SERVER">-->
+<!--        <groupId>BLANKAPPSEEDTEST</groupId>-->
+<!--        <start>true</start>-->
+<!--        <options>-Xmx256m -DXSD_VALIDATE=false</options>-->
+<!--        <module>genesis-pal-requestserver</module>-->
+<!--        <package>global.genesis.requestreply.pal</package>-->
+<!--        <script>blankappseedtest-reqrep.kts</script>-->
+<!--        <description>Server one-shot requests for details</description>-->
+<!--        <language>pal</language>-->
+<!--    </process>-->
+<!--    <process name="BLANKAPPSEEDTEST_EVENT_HANDLER">-->
+<!--        <groupId>BLANKAPPSEEDTEST</groupId>-->
+<!--        <start>true</start>-->
+<!--        <options>-Xmx512m -DRedirectStreamsToLog=true -DXSD_VALIDATE=false</options>-->
+<!--        <module>genesis-pal-eventhandler</module>-->
+<!--        <package>global.genesis.eventhandler.pal</package>-->
+<!--        <script>blankappseedtest-eventhandler.kts</script>-->
+<!--        <description>Handles events</description>-->
+<!--        <classpath>blankappseedtest-app*</classpath>-->
+<!--        <language>pal</language>-->
+<!--    </process>-->
+<!--    <process name="BLANKAPPSEEDTEST_CONSOLIDATOR">-->
+<!--        <groupId>BLANKAPPSEEDTEST</groupId>-->
+<!--        <start>true</start>-->
+<!--        <options>-Xmx256m -DRedirectStreamsToLog=true -DXSD_VALIDATE=false</options>-->
+<!--        <module>genesis-pal-consolidator</module>-->
+<!--        <package>global.genesis.pal.consolidator</package>-->
+<!--        <script>blankappseedtest-consolidator.kts</script>-->
+<!--        <loggingLevel>INFO,DATADUMP_OFF</loggingLevel>-->
+<!--        <language>pal</language>-->
+<!--    </process>-->
+<!--    <process name="BLANKAPPSEEDTEST_STREAMER">-->
+<!--        <groupId>BLANKAPPSEEDTEST</groupId>-->
+<!--        <start>true</start>-->
+<!--        <options>-Xmx128m -DXSD_VALIDATE=false</options>-->
+<!--        <module>genesis-pal-streamer</module>-->
+<!--        <package>global.genesis.streamer.pal</package>-->
+<!--        <script>blankappseedtest-streamer.kts</script>-->
+<!--        <loggingLevel>INFO,DATADUMP_OFF</loggingLevel>-->
+<!--        <language>pal</language>-->
+<!--    </process>-->
+<!--    <process name="BLANKAPPSEEDTEST_STREAMER_CLIENT">-->
+<!--        <groupId>BLANKAPPSEEDTEST</groupId>-->
+<!--        <start>true</start>-->
+<!--        <options>-Xmx128m -DXSD_VALIDATE=false</options>-->
+<!--        <module>genesis-pal-streamerclient</module>-->
+<!--        <package>global.genesis.streamerclient.pal</package>-->
+<!--        <script>blankappseedtest-streamer-client.kts</script>-->
+<!--        <loggingLevel>INFO,DATADUMP_OFF</loggingLevel>-->
+<!--        <language>pal</language>-->
+<!--    </process>-->
+<!--    <process name="GENESIS_EVALUATOR">-->
+<!--        <start>true</start>-->
+<!--        <groupId>GENESIS</groupId>-->
+<!--        <options>-Xmx512m -DXSD_VALIDATE=false</options>-->
+<!--        <module>genesis-evaluator</module>-->
+<!--        <primaryOnly>true</primaryOnly>-->
+<!--        <package>global.genesis.eventhandler,global.genesis.evaluator</package>-->
+<!--    </process>-->
+<!--    <process name="BLANKAPPSEEDTEST_DATAPIPELINE">-->
+<!--        <groupId>BLANKAPPSEEDTEST</groupId>-->
+<!--        <start>true</start>-->
+<!--        <options>-Xmx256m -DRedirectStreamsToLog=true -DXSD_VALIDATE=false</options>-->
+<!--        <module>genesis-pal-datapipeline</module>-->
+<!--        <package>global.genesis.datapipeline.pal</package>-->
+<!--        <script>blankappseedtest-data-pipeline.kts</script>-->
+<!--        <description>External data ingress pipeline</description>-->
+<!--        <language>pal</language>-->
+<!--        <loggingLevel>TRACE,DATADUMP_ON</loggingLevel>-->
+<!--    </process>-->
+</processes>
